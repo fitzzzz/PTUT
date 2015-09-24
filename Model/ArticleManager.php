@@ -10,14 +10,13 @@ class ArticleManager extends Model {
 		$allArticle = $this->getAllArticleFromRSS($page);
 		//echo $allArticle[0]["description"];
 		for ($i = 0; $i < count($allArticle); $i++) {
-			if (strpos(strtolower($allArticle[$i]["description"]), strtolower($tag)) === false) {
-				unset($allArticle[$i]);
-				//echo "coucou";
+			if (!(strpos(strtolower($allArticle[$i]["description"]), strtolower($tag)) === false)) {
+				$allArticleFind[] = $allArticle[$i];
 			}
 		}
-		$allArticle = array_values($allArticle);
-		//print_r($allArticle);
-		return ($allArticle);
+		if (isset($allArticleFind))
+			return ($allArticleFind);
+		return null;
 	}
 
 	function 	getAllArticleFromRSS($output) {
