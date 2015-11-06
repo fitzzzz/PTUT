@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "CODE";
+    src: url('font/CODE Light.otf');
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	background: url(img/bg.jpg) no-repeat center fixed; 
+  	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  	background-size: cover; /* version standardisée */
+  	min-height: 100%;
+  	margin:0;
+  	padding:0;
+  	position: relative;
+}
+
+/* HEADER */
+header{
+	text-align:center;
+	background-color: rgba(42, 42, 42, 0.9);
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	margin:0 auto;
+	/*height:110px;*/
+	color:white;
+}
+
+.main{
+	font-family: "CODE";
+	margin-bottom:6px;
+	margin-top:15px;
+
+}
+
+
+.saisie{
+	padding:10px 40px 10px 40px;
+	margin: 0;
+	border:1px solid white;
+	display: inline-block;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.view{
+	width: 10%;
+	height: 10%;
+}
+
+input[type=url]{
+	margin: 0;
+	font-family: sans-serif;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	padding: 8px;
+	border: solid 1px #dcdcdc;
+	transition: box-shadow 0.3s, border 0.3s;
+}
+
+input[type=button]{
+	margin: 0;
+	font-family: sans-serif;
+	border-radius: none;
+	padding: 8px;
+	border: solid 1px #dcdcdc;
+	
+}
+
+input[type=url]:focus {
+	border: solid 1px #707070;
+  	box-shadow: 0 0 5px 1px #969696;
+}
+
+/* ENSEMBLE D'ARTICLES */
+#content{
+	margin-top:110px;
+	margin-left: 370px;
+	margin-right: 370px;
+    font-family: Arial,sans-serif;
+}
+
+#content h1{
+	text-align: center;
+	padding-top: 30px;
+	margin-bottom: 0;
+	font-family: Arial,sans-serif;
+	color:#3c3c3b;
+}
+
+.img_doc{
+	width: 100%;
+	height: 100%;
+}
+
+.article{
+	text-align: center;
+	padding-top: 20px;
+	border-bottom: 1px solid #B8BDC5;
+}
+
+.error{
+	color:red;
+	text-align: center;
+	font-family: Arial,sans-serif;
+	font-size: 20px;
+}
+
+a{
+	text-decoration: none;
+	display: block;
+	margin: 20px;
+	padding: 0 0 15px 300px;
+    color:black;
+}
+
+img{
+	width: 520px;
+	height: 320px;
+}
+
+video{
+	width: 550px;
+	height: 320px;
+}
+
+/* FOOTER */
+footer{
+	bottom:0;
+	left:0;
+	right:0;
+	width:100%;
+	position: absolute;
+	height:32px;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer p{
+	text-align: center;
+	margin:5px 0 0 0;
+	color:#9D9D9D;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+	color: white;
+}
+
+
+/* - de 1200px */ 
+@media only screen and (max-width:1200px) {
+	#content{
+		margin: 0;
+	}
+}
+
+@media only screen and (max-width:600px) {
+	img, video{
+		width:250px;
+		height: 160px;
+	}
+	article h1{
+		font-size: 18px;
+	}
+	article a{
+		font-size: 12px;
+	}
+	article p{
+		font-size: 12px;
+	}
+	a{
+		padding-left: 180px;
+	}
+	header h1{
+		font-size: 22px;
+	}
+	footer p{
+		font-size: 9px;
+	}
+}
